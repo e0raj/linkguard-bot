@@ -1,0 +1,31 @@
+name = "linkguard-bot"
+main = "function/index.ts"
+compatibility_date = "2025-01-15"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+# Real browser screenshots (Cloudflare Browser Rendering).
+# Requires the Workers Paid plan. If you remove this block, the bot
+# automatically falls back to a free third-party screenshot service.
+[browser]
+binding = "BROWSER"
+
+[vars]
+MAX_SCANS_PER_DAY = "40"
+SCREENSHOT_FALLBACK = "on"
+
+# ---------------------------------------------------------------------------
+# OPTIONAL: caching + rate limiting (strongly recommended)
+# Create it once with:  npx wrangler kv namespace create CACHE
+# then paste the id below and uncomment these three lines.
+# ---------------------------------------------------------------------------
+# [[kv_namespaces]]
+# binding = "CACHE"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# Secrets are NOT stored here. Set them with:
+#   npx wrangler secret put BOT_TOKEN
+#   npx wrangler secret put WEBHOOK_SECRET
+#   npx wrangler secret put SAFE_BROWSING_KEY      (optional)
+#   npx wrangler secret put VIRUSTOTAL_KEY         (optional)
+#   npx wrangler secret put ADMIN_KEY              (optional)

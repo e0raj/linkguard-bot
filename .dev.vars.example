@@ -1,0 +1,10 @@
+# Copy this file to .dev.vars for local development (never commit .dev.vars)
+BOT_TOKEN="123456789:AAxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+WEBHOOK_SECRET="pick-a-long-random-string"
+# Optional: adds Google Safe Browsing lookups
+SAFE_BROWSING_KEY=""
+# Optional: adds VirusTotal lookups
+VIRUSTOTAL_KEY=""
+# Optional: enables the HTTP API at /scan
+ADMIN_KEY=""
+MAX_SCANS_PER_DAY="40"

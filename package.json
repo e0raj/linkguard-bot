@@ -1,0 +1,26 @@
+{
+  "name": "linkguard-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Telegram bot that opens any link in a real browser, runs 40+ safety checks and tells you if it is safe - with a live screenshot.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx test/run.ts",
+    "set-webhook": "node scripts/set-webhook.mjs",
+    "delete-webhook": "node scripts/delete-webhook.mjs",
+    "tail": "wrangler tail"
+  },
+  "dependencies": {
+    "@cloudflare/puppeteer": "^1.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241218.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "wrangler": "^3.99.0"
+  }
+}
